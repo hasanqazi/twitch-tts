@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="SikeBot"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://icon.svg"
+
+[audio]
+
+general/text_to_speech=true
+
+[autoload]
+
+TwitchService="*res://addons/twitcher/twitch_service.gd"
+HttpClientManager="*res://addons/twitcher/communication/http_client_manager.gd"
+Filter="*res://filter.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/resizable=false
+window/stretch/aspect="ignore"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gift/plugin.cfg")
+
+[twitch]
+
+auth/broadcaster_id="97097808"
+auth/client_id="qt7immd0k4yjefc5np4xe4azyz7m34"
+auth/client_secret="kkygzvo3gjqvwffmwnopl5r58iqzpu"
+auth/scopes/chat=3
+websocket/irc/username="SikeFoxBot2"
